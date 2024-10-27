@@ -1722,3 +1722,70 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+/* Popup Styles */
+.review-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.review-popup.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-content {
+  background-color: var(--background-color);
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 8px;
+  position: relative;
+  color: var(--default-color);
+  font-family: var(--default-font);
+}
+
+.popup-content h2 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  margin-bottom: 15px;
+}
+
+.popup-content p {
+  margin-bottom: 20px;
+  color: var(--default-color);
+}
+
+.popup-content .btn-review {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.popup-content .btn-review:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: var(--default-color);
+  font-size: 20px;
+  cursor: pointer;
+}
+

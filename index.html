@@ -40,7 +40,7 @@
           <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
           <i class="bi bi-phone d-flex align-items-center ms-4"><span>+373 688 92 089</span></i>
           <a href=""> <i class="bi bi-facebook"></i> </a>
-          <a href=""> <i class="bi bi-instagram"></i> </a>
+          <a href="https://www.instagram.com/churchills_whiskybar/"> <i class="bi bi-instagram"></i> </a>
         </div>
         <div class="languages d-none d-md-flex align-items-center">
           <ul>
@@ -70,6 +70,7 @@
             <li><a href="#chefs">Chefs</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="starter-page.html">FeedBack</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -857,7 +858,7 @@
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
-              <div class="testimonial-item" "="">
+              <div class="testimonial-item">
             <p>
               <i class=" bi bi-quote quote-icon-left"></i>
                 <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
@@ -1018,7 +1019,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Team</h2>
-        <p>Necessitatibus eius consequatur</p>
+        <p>Best People</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -1031,7 +1032,7 @@
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Walter White</h4>
-                  <span>Master Chef</span>
+                  <span>Master BarMan</span>
                 </div>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -1107,7 +1108,7 @@
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
                 <h3>Location</h3>
-                <p>Strada Mitropolit Gavriil Bănulescu-Bodoni 22, Chișinău, Moldova</p>
+                <a href="https://maps.app.goo.gl/nSpRmfGnjKV1yz8z6">Strada Mitropolit Gavriil Bănulescu-Bodoni 22, Chișinău, Moldova</a>
               </div>
             </div><!-- End Info Item -->
 
@@ -1183,42 +1184,37 @@
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Restaurantly</span>
+            <span class="sitename"><img src="assets/img/logo.png" alt=""></span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <a href="https://maps.app.goo.gl/nSpRmfGnjKV1yz8z6">Strada Mitropolit Gavriil Bănulescu-Bodoni 22</a><br>
+            <a href="https://maps.app.goo.gl/nSpRmfGnjKV1yz8z6">Chișinău, Moldova</a><br>
+            <p class="mt-3"><strong>Phone:</strong> <a href="tel:+37368892089">+373 688 92 089</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@example.com">info@example.com</a></p>
+
           </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
+
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#events">Services</a></li>
+            <li><a href="starter-page.html">Leave a Review</a></li>
 
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
+          <h4>Our Social Links</h4>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
         </div>
 
 
@@ -1231,6 +1227,18 @@
     </div>
 
   </footer>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+    // Show popup after a delay
+    setTimeout(function () {
+      document.getElementById("reviewPopup").classList.add("show");
+    }, 5000); // 5000 ms = 5 seconds
+
+    // Close popup function
+    window.closePopup = function () {
+      document.getElementById("reviewPopup").classList.remove("show");
+    };
+  });
+  </script>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -1249,6 +1257,16 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- Review Popup -->
+  <div id="reviewPopup" class="review-popup">
+    <div class="popup-content">
+      <button class="close-btn" onclick="closePopup()"><i class="bi bi-x-circle"></i> </button>
+      <h2>We Value Your Feedback!</h2>
+      <p>Please take a moment to leave an honest review of your experience.</p>
+      <a href="starter-page.html" class="btn-review">Leave a Review</a>
+    </div>
+  </div>
+
 
 </body>
 
