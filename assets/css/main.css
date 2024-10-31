@@ -1164,6 +1164,15 @@ section,
   margin-top: 50px;
   position: relative;
 }
+.menu-img {
+  cursor: pointer;
+}
+.circular-img {
+
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the image scales correctly within the circular frame */
+}
+
 
 .menu .menu-img {
   width: 80px;
