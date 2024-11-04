@@ -6,20 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cf834467-07cd-48b3-ada1-b2d23e1ed091" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/bread-barrel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/caesar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/cake.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/greek-salad.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/lobster-bisque.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/lobster-roll.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/mozzarella.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/spinach-salad.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/tuscan-grilled.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/specials-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/specials-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/specials-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/specials-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/specials-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/specials-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/events-slider/events-slider-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/events-slider/events-slider-1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +39,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ionut\Documents\GitHub\Churchill_s" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -67,7 +61,7 @@
       <updated>1729857249926</updated>
       <workItem from="1729857251728" duration="4033000" />
       <workItem from="1730110073357" duration="599000" />
-      <workItem from="1730228173005" duration="9055000" />
+      <workItem from="1730228173005" duration="15599000" />
     </task>
     <servers />
   </component>
