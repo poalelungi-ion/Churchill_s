@@ -6,11 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="cf834467-07cd-48b3-ada1-b2d23e1ed091" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bar_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/bar_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cotailparty.html" beforeDir="false" afterPath="$PROJECT_DIR$/cotailparty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/chefs/chefs-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/menu/onion_rings.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/onion_rings.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/specials-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/specials-5.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/review.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu_cigar.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu_cigar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +64,7 @@
       <updated>1729857249926</updated>
       <workItem from="1729857251728" duration="4033000" />
       <workItem from="1730110073357" duration="599000" />
-      <workItem from="1730228173005" duration="17476000" />
+      <workItem from="1730228173005" duration="20501000" />
     </task>
     <servers />
   </component>
