@@ -6,38 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="cf834467-07cd-48b3-ada1-b2d23e1ed091" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/almonds.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/almonds.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/batata.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/batata.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/bbq_wings.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/bbq_wings.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/beef_burger.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/beef_burger.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/benedict.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/benedict.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/black_rice.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/black_rice.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/cheese_sticks.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/cheese_sticks.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/chese_plattern.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/chese_plattern.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/chicken_fingers.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/chicken_fingers.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/chicken_salad.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/chicken_salad.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/chowder.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/chowder.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/cloeslaw.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/cloeslaw.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/fish_and_chips.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/fish_and_chips.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/fried_potato.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/fried_potato.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/jerky.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/jerky.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/lentil.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/lentil.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/mash_potato.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/mash_potato.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/meat_and_chips.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/meat_and_chips.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/mushroom.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/mushroom.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/nuts.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/nuts.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/pulled_burger.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/pulled_burger.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/ribs_asian.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/ribs_asian.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/ribs_bbq.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/ribs_bbq.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/ribs_buffalo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/ribs_buffalo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/sandwitch.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/sandwitch.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/shrimp_and_chips.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/shrimp_and_chips.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/shrimp_salad.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/shrimp_salad.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/tomato_salad.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/tomato_salad.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/truffel_chicken.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/truffel_chicken.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/whiskey_platter.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/whiskey_platter.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/menu/wings_buffalo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/menu/wings_buffalo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bar_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/bar_menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cotailparty.html" beforeDir="false" afterPath="$PROJECT_DIR$/cotailparty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu_cigar.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu_cigar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/review.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +65,7 @@
       <workItem from="1729857251728" duration="4033000" />
       <workItem from="1730110073357" duration="599000" />
       <workItem from="1730228173005" duration="26635000" />
-      <workItem from="1731090218220" duration="896000" />
+      <workItem from="1731090218220" duration="3189000" />
     </task>
     <servers />
   </component>
