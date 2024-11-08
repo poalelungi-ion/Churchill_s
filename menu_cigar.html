@@ -39,16 +39,41 @@
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:churchillswhiskybar@gmail.com">churchillswhiskybar@gmail.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+373 688 92 089</span></i>
+        <a href="tel:+37368892089"><i class="bi bi-phone d-flex align-items-center ms-4"></i></a>
+        <a href=""> <i class="bi bi-facebook"></i> </a>
+        <a href="https://www.instagram.com/churchills_whiskybar/"> <i class="bi bi-instagram"></i> </a>
       </div>
+      <div id="google_translate_element" style="display: none;"></div>
+
       <div class="languages d-none d-md-flex align-items-center">
         <ul>
-          <li>En</li>
-          <li><a href="#">Ro</a></li>
+          <li><a href="#" onclick="translatePage('en')">En</a></li>
+          <li><a href="#" onclick="translatePage('ro')">Ro</a></li>
         </ul>
       </div>
+
     </div>
   </div><!-- End Top Bar -->
+  <script type="text/javascript">
+    function translatePage(language) {
+      var translateDropdown = document.querySelector(".goog-te-combo");
+      if (translateDropdown) {
+        translateDropdown.value = language;
+        translateDropdown.dispatchEvent(new Event("change"));
+      }
+    }
+  </script>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,ro',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <div class="branding d-flex align-items-cente">
 
@@ -61,14 +86,14 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" class="active">Home<br></a></li>
-          <li><a href="#membership">Memberships</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#specials">Specials</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#chefs">Chefs</a></li>
+          <li><a href="#hero" >Home<br></a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="menu_bar.html">Bar</a></li>
+          <li><a href="menu_cigar.html" class="active"  >Cigar Club</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="review.html">FeedBack</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -270,590 +295,214 @@
   <section id="starter-section" class="starter-section section">
 
 
-      <!-- Menu Section -->
-      <section id="menu" class="menu section">
+    <!-- Menu Section -->
+    <section id="menu" class="menu section">
 
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Menu</h2>
-          <p>Check Our Tasty Menu</p>
-        </div><!-- End Section Title -->
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Cigar Menu</h2>
+        <p>Explore Our Premium Cigars Collection</p>
+      </div>
 
-        <div class="container isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+      <div class="container isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-          <div class="row" data-aos="fade-up" data-aos-delay="100">
-            <div class="col-lg-12 d-flex justify-content-center">
-              <ul class="menu-filters isotope-filters">
-                <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-breakfast">Breakfast</li>
-                <li data-filter=".filter-appetizers">Appetizers</li>
-                <li data-filter=".filter-salads">Salads</li>
-                <li data-filter=".filter-soups">Soups</li>
-                <li data-filter=".filter-main">Main Dishes</li>
-                <li data-filter=".filter-burgers-sandwiches">Burgers & Sandwiches</li>
-                <li data-filter=".filter-sides">Side Dishes</li>
-              </ul>
-            </div>
-          </div><!-- Menu Filters -->
-
-          <div class="row isotope-container" data-aos="fade-up" data-aos-delay="200">
-            <script>document.addEventListener("DOMContentLoaded", function() {
-              const lightbox = GLightbox({
-                selector: '.glightbox',
-                touchNavigation: true,
-                loop: true,
-              });
-            });
-            </script>
-            <!-- Breakfast Items -->
-            <div class="col-lg-6 menu-item isotope-item filter-breakfast">
-
-              <a href="assets/img/menu/churchill_s_breakfast.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/churchill_s_breakfast.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-
-              <div class="menu-content">
-                <a href="#">Churchill's Breakfast</a><span>120 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                fried eggs with spicy sausages, mushrooms, tomatoes, and beans flambe (350g)
-              </div>
-            </div>
-
-
-            <div class="col-lg-6 menu-item isotope-item filter-breakfast">
-              <a href="assets/img/menu/mini_pankakes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/mini_pankakes.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Eggs Benedict</a><span>160 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                poached eggs with bacon and hollandaise sauce (270g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-breakfast">
-              <a href="assets/img/menu/omelette.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/omelette.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Omelette With Chicken Pastrami</a><span>90 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                eggs, pastrami, cheese, mixed salad, hollandaise sauce (350g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-breakfast">
-              <a href="assets/img/menu/omelette.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/omelette.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Omelette With Pork Pastrami</a><span>100 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                eggs, pastrami, cheese, mixed salad, hollandaise sauce (350g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-breakfast">
-
-              <a href="assets/img/menu/mini_pankakes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/mini_pankakes.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-
-              <div class="menu-content">
-                <a href="#">Cheese Pancakes</a><span>125 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                sweet cheese donuts with seasonal fruits and jam (300g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-breakfast">
-              <a href="assets/img/menu/mini_pankakes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/mini_pankakes.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Oatmeal</a><span>90 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                porridge with seasonal fruits and almonds (350g)
-              </div>
-            </div>
-
-            <!-- Appetizers -->
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/mini_pankakes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/mini_pankakes.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Beef Jerky</a><span>120 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                dehydrated beef meat (100g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/mini_pankakes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/mini_pankakes.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Chicken Jerky</a><span>100 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                dehydrated chicken meat (100g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/mini_pankakes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/mini_pankakes.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Pork Jerky</a><span>110 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                dehydrated pork meat (100g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/mini_pankakes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/mini_pankakes.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Meat and Chips </a><span>110 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                beef meatballs in aromatic crust served with free batatas, roassted potatoes and blue cheese sauce (300g)
-              </div>
-            </div>
-
-
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/mini_pankakes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/mini_pankakes.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Chicken Fingers</a><span>100 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                chicken nuggets with roasted potatoes and tzatziki sauce)(330g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/mini_pankakes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/mini_pankakes.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Cheese Sticks</a><span>100 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                cheese sticks with mixed caramelized nuts and honey mustard sauce (230g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/mini_pankakes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/mini_pankakes.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Fish and Chips</a><span>165 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Zander tempura with shrimp chips, roasted potatoes and  tzatziki sauce (275g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/mini_pankakes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/mini_pankakes.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Shrimp and  Chips</a><span>190 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Shrimp tempura with peppers tempura, shrimp chips, roasted potatoes and sweet chili sauce
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/onion_rings.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/onion_rings.jpg" alt="Onion Rings" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Onion Rings </a><span>60 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Onion rings with honey mustard sauce (200g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/fried_almonds.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/fried_almonds.jpg" alt="Fried Almonds with Salt" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Fried Almonds with Salt </a><span>100 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Salted fried almonds (100g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/caramelized_nuts.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/caramelized_nuts.jpg" alt="Caramelized Mixed Nuts" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Caramelized Mixed Nuts </a><span>120 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Mixed nuts caramelized to perfection (100g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/beer_platter.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/beer_platter.jpg" alt="Beer Platter" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Beer Platter </a><span>360 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Beef/pork/chicken jerky, spicy chicken sausages, pork pastrami, cheese sticks, roasted potatoes, onion rings, mixed caramelized nuts, honey mustard, relish, tzatziki sauce (650g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/whisky_platter.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/whisky_platter.jpg" alt="Whisky Platter" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Whisky Platter </a><span>590 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Asian-style pork ribs, blue cheese, pork meatballs, pork pastrami, dark chocolate, mixed caramelized nuts, mixed dried fruits, sweet chili sauce, BBQ sauce, blue cheese sauce (800g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/cheese_platter.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/cheese_platter.jpg" alt="Cheese Platter" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Cheese Platter </a><span>300 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Assorted cheeses: dor blue, parmesan, camembert; seasonal fruits, mixed caramelized nuts, mixed dried fruits, honey (420g)
-              </div>
-            </div>
-
-
-
-            <!-- Salads -->
-            <div class="col-lg-6 menu-item isotope-item filter-salads">
-              <a href="assets/img/menu/mini_pankakes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/mini_pankakes.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Churchill's Chicken Salad </a><span>130 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Chicken fillet, mixed salad, avocado, cherry tomatoes, parmesan, house dressing (260g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-salads">
-              <a href="assets/img/menu/mini_pankakes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/mini_pankakes.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Churchill's Shrimp Salad </a><span>170 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Shrimps, mixed salad, avocado, cherry tomatoes, sesame, house sauce (260g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-salads">
-              <a href="assets/img/menu/mini_pankakes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/mini_pankakes.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Tomato Salad </a><span>90 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Tomatoes, red onion, sour cream (260g)
-              </div>
-            </div>
-
-            <!-- Soups -->
-            <div class="col-lg-6 menu-item isotope-item filter-soups">
-              <a href="assets/img/menu/mini_pankakes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/mini_pankakes.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Chowder Shrimp Soup </a><span>130 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Shrimps, potato, carrot, celery, onion, corn, bacon, whipped cream (380g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-soups">
-              <a href="assets/img/menu/mini_pankakes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/mini_pankakes.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Creamy Mushroom Soup </a><span>100 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Mushrooms, potatoes, onion, carrots, celery, parmesan, croutons (330g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-soups">
-              <a href="assets/img/menu/mini_pankakes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/mini_pankakes.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Lentil Soup </a><span>100 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Lentils, pork pastrami, potatoes, carrots, onion, croutons (380g)
-              </div>
-            </div>
-
-            <!-- Main Dishes -->
-            <div class="col-lg-6 menu-item isotope-item filter-main">
-              <a href="assets/img/menu/pork_ribs_bbq.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/pork_ribs_bbq.jpg" alt="Pork Ribs BBQ" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Pork Ribs BBQ</a><span>280 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                BBQ pork ribs, coleslaw, roasted potatoes, BBQ sauce (300/80/80/50g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-main">
-              <a href="assets/img/menu/pork_ribs_buffalo.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/pork_ribs_buffalo.jpg" alt="Pork Ribs Buffalo" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Pork Ribs Buffalo</a><span>280 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Buffalo sauce pork ribs, coleslaw, roasted potatoes, buffalo sauce (300/80/80/50g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-main">
-              <a href="assets/img/menu/pork_ribs_asian.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/pork_ribs_asian.jpg" alt="Pork Ribs Asian Style" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Pork Ribs Asian Style</a><span>280 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Pork ribs in spicy-sweet sauce, coleslaw, roasted potatoes, sweet chili sauce (300/80/80/50g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-main">
-              <a href="assets/img/menu/chicken_wings_bbq.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/chicken_wings_bbq.jpg" alt="Chicken Wings BBQ" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Chicken Wings BBQ</a><span>150 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Chicken wings in BBQ sauce, roasted potatoes, coleslaw (250g/80g/50g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-main">
-              <a href="assets/img/menu/chicken_wings_buffalo.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/chicken_wings_buffalo.jpg" alt="Chicken Wings Buffalo" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Chicken Wings Buffalo</a><span>150 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Chicken wings in buffalo sauce, roasted potatoes, coleslaw (250g/80g/50g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-main">
-              <a href="assets/img/menu/chicken_truffle.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/chicken_truffle.jpg" alt="Chicken Breast with Truffle Sauce" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Chicken Breast with Truffle Sauce</a><span>160 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Chicken breast, mashed potatoes, truffle sauce (170/200g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-main">
-              <a href="assets/img/menu/dorado_fillet.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/dorado_fillet.jpg" alt="Dorado Fillet with Rice" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Dorado Fillet with Rice </a><span>260 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Dorado fillet, black rice, house sauce (150g/150g/30g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-main">
-              <a href="assets/img/menu/rib_eye_steak.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/rib_eye_steak.jpg" alt="Rib-eye Steak" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Rib-eye Steak </a><span>95 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Matured beef steak, coleslaw, and roasted potatoes (100g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-main">
-              <a href="assets/img/menu/steak_new_york.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/steak_new_york.jpg" alt="Steak New York" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Steak New York </a><span>95 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Matured beef steak, coleslaw, and roasted potatoes (100g)
-              </div>
-            </div>
-
-            <!-- Burgers and Sandwiches -->
-            <div class="col-lg-6 menu-item isotope-item filter-burgers-sandwiches">
-              <a href="assets/img/menu/beef_burger.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/beef_burger.jpg" alt="Beef Burger" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Beef Burger </a><span>160 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Bun, minced beef, tomatoes, pickles, blue cheese, cheddar, BBQ sauce; served with roasted potatoes and honey mustard sauce (400/80/50g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-burgers-sandwiches">
-              <a href="assets/img/menu/pulled_pork_burger.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/pulled_pork_burger.jpg" alt="Pulled Pork Burger" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Pulled Pork Burger </a><span>150 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Bun, pork shoulder in BBQ sauce, coleslaw; served with roasted potatoes and honey mustard sauce (330g/80g/50g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-burgers-sandwiches">
-              <a href="assets/img/menu/chicken_pastrami_sandwich.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/chicken_pastrami_sandwich.jpg" alt="Chicken Pastrami Sandwich" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Chicken Pastrami Sandwich </a><span>90 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Panini, salad mix, cucumber, tomato, chicken pastrami, gouda; served with honey mustard and relish sauces (350g)
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-burgers-sandwiches">
-              <a href="assets/img/menu/pork_pastrami_sandwich.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/pork_pastrami_sandwich.jpg" alt="Pork Pastrami Sandwich" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Pork Pastrami Sandwich </a><span>95 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Panini, salad mix, cucumber, tomato, pork pastrami, gouda; served with honey mustard and relish sauces (350g)
-              </div>
-            </div>
-
-
-            <!-- Side Dishes -->
-            <div class="col-lg-6 menu-item isotope-item filter-sides">
-              <a href="assets/img/menu/deep_fried_potatoes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/deep_fried_potatoes.jpg" alt="Deep Fried Potatoes" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Deep Fried Potatoes (200/50g)</a><span>50 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Baked and fried potatoes served with honey mustard sauce
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-sides">
-              <a href="assets/img/menu/coleslaw.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/coleslaw.jpg" alt="Coleslaw" class="img-fluid circular-img">
-              </a>
-              <div class="menu-content">
-                <a href="#">Coleslaw (200g)</a><span>50 MDL</span>
-              </div>
-              <div class="menu-ingredients">
-                Cabbage, carrots, pepper, apples, mayonnaise, mustard
-              </div>
-            </div>
-
-            <div class="col-lg-6 menu-item isotope-item filter-sides">
-            <a href="assets/img/menu/mashed_potatoes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-              <img src="assets/img/menu/mashed_potatoes.jpg" alt="Mashed Potatoes" class="img-fluid circular-img">
-            </a>
-            <div class="menu-content">
-              <a href="#">Mashed Potatoes (200g)</a><span>50 MDL</span>
-            </div>
-            <div class="menu-ingredients">
-              Creamy mashed potatoes
-            </div>
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul class="menu-filters isotope-filters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-sets">Cigar Sets</li>
+              <li data-filter=".filter-honduras">Honduras</li>
+              <li data-filter=".filter-nicaragua">Nicaragua</li>
+              <li data-filter=".filter-dominican">Dominican</li>
+              <li data-filter=".filter-mexico">Mexico</li>
+            </ul>
           </div>
-
-          <div class="col-lg-6 menu-item isotope-item filter-sides">
-            <a href="assets/img/menu/black_rice.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-              <img src="assets/img/menu/black_rice.jpg" alt="Black Rice" class="img-fluid circular-img">
-            </a>
-            <div class="menu-content">
-              <a href="#">Black Rice (150g)</a><span>60 MDL</span>
-            </div>
-            <div class="menu-ingredients">
-              Flavorful black rice, perfect as a side dish
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item isotope-item filter-sides">
-            <a href="assets/img/menu/batata.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-              <img src="assets/img/menu/batata.jpg" alt="Batata" class="img-fluid circular-img">
-            </a>
-            <div class="menu-content">
-              <a href="#">Batata (125/50g)</a><span>80 MDL</span>
-            </div>
-            <div class="menu-ingredients">
-              Sweet potato with truffle sauce
-            </div>
-          </div>
-
-          </div><!-- Menu Container -->
-
         </div>
 
-      </section><!-- /Menu Section -->
+        <div class="row isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+          <!-- Honduras Section -->
+          <div class="col-lg-6 menu-item isotope-item filter-honduras">
+            <div class="menu-content">
+              <h3>Honduras</h3>
+            </div>
+            <div class="menu-ingredients">
+              <ul>
+                <li><strong>2012 by Oscar Connecticut Toro box pressed</strong> - 400 lei<br>Notes: Creamy cedar, nuts, jam.</li>
+                <li><strong>2012 by Oscar Connecticut Corojo box pressed</strong> - 400 lei<br>Notes: Coffee, pepper, jam, spices.</li>
+                <li><strong>2012 Maduro Toro box pressed</strong> - 400 lei<br>Notes: Chocolate, roasted nuts, leather, coffee.</li>
+                <li><strong>2012 by Oscar Sumatra Toro box pressed</strong> - 400 lei<br>Notes: Earthy, exotic spices, burnt caramel, rye bread.</li>
+                <li><strong>2012 by Oscar Sumatra Short Robusto box pressed</strong> - 350 lei<br>Notes: Coffee, earthy, spices.</li>
+                <li><strong>The Oscar Maduro Robusto</strong> - 500 lei<br>Notes: Cinnamon, sweet cedar, earthy, leather, dark chocolate, pepper, sweet cream, cedar, hay, raisin jam.</li>
+                <li><strong>Raw Dog Gordito</strong> - 500 lei<br>Notes: Wood, spicy seasonings.</li>
+                <li><strong>2012 by Oscar Barber Pole Toro box pressed</strong> - 450 lei<br>Notes: Dark cocoa, espresso, floral, raisins, sour cream, cedar, black pepper, black licorice.</li>
+                <li><strong>2012 by Oscar Connecticut Robusto box pressed</strong> - 400 lei<br>Notes: Cream, nuts, jam, spices.</li>
+                <li><strong>10th Anniversary Maduro Toro</strong> - 650 lei<br>Notes: Cream candle, floral, chocolate, earthy, leather, pepper, fruit jam.</li>
+                <li><strong>10th Anniversary Maduro Solomon</strong> - 750 lei<br>Notes: Sweet, herbs.</li>
+                <li><strong>Altar Q by Oscar Sumatra Toro</strong> - 550 lei<br>Notes: Nuts, coffee, spices.</li>
+                <li><strong>My Way Bayron Duarte Sixty</strong> - 500 lei<br>Notes: Roasted coffee, nuts, hazelnuts.</li>
+                <li><strong>Leaf by Oscar Connecticut Toro</strong> - 600 lei<br>Notes: Nuts, wood, pepper.</li>
+                <li><strong>Leaf by Oscar Corojo Robusto</strong> - 450 lei<br>Notes: Cocoa, coffee, cedar, red pepper.</li>
+                <li><strong>Leaf by Oscar Maduro Robusto</strong> - 450 lei<br>Notes: Coffee, chocolate, vanilla.</li>
+                <li><strong>Leaf by Oscar Corojo Sixty</strong> - 600 lei<br>Notes: Pepper, wood, nuts.</li>
+                <li><strong>Leaf by Oscar Maduro Sixty</strong> - 600 lei<br>Notes: Spicy coffee, earthy, roasted.</li>
+                <li><strong>Leaf by Oscar 10th Anniversary Criollo Sixty</strong> - 600 lei<br>Notes: Earthy, black pepper, leather, cinnamon, creamy, hay.</li>
+                <li><strong>The Oscar Robusto</strong> - 500 lei<br>Notes: Cedar, earthy, chocolate.</li>
+                <li><strong>The Oscar Toro</strong> - 550 lei<br>Notes: Tobacco, wood, earthy, spices.</li>
+                <li><strong>The Oscar Sixty</strong> - 600 lei<br>Notes: Cedar, earthy, chocolate.</li>
+                <li><strong>The Oscar Maduro Toro</strong> - 550 lei<br>Notes: Tobacco, coffee, chocolate, earthy, spices.</li>
+                <li><strong>The Oscar Maduro Sixty</strong> - 600 lei<br>Notes: Cocoa, spices, earthy, leather.</li>
+                <li><strong>Blue in green Robusto</strong> - 580 lei<br>Notes: Cream, cedar.</li>
+                <li><strong>Blue in green Gran Robusto</strong> - 600 lei<br>Notes: Oatmeal dessert, cedar.</li>
+                <li><strong>Black Dahlia Pyramid</strong> - 720 lei<br>Notes: Cream, spices.</li>
+                <li><strong>Gran Reserva 2012 Gran Robusto</strong> - 500 lei<br>Notes: Coffee.</li>
+                <li><strong>La Conquista Imperial</strong> - 560 lei<br>Notes: Cocoa, wood, black pepper, roasted coffee, frosting, cinnamon.</li>
+              </ul>
+            </div>
+          </div>
+
+
+          <!-- Nicaragua Section -->
+          <div class="col-lg-6 menu-item isotope-item filter-nicaragua">
+            <div class="menu-content">
+              <h3>Nicaragua</h3>
+            </div>
+            <div class="menu-ingredients">
+              <ul>
+                <li><strong>Rocky Patel Number 6</strong> - 800 lei<br>Notes: Vanilla, cocoa, black pepper, nuts, spicy.</li>
+                <li><strong>Rocky Patel Liberation Robusto</strong> - 650 lei<br>Notes: Earthy, roasted coffee.</li>
+                <li><strong>Rocky Patel Smoking Champ Robusto</strong> - 600 lei<br>Notes: Spices.</li>
+                <li><strong>Rocky Patel ALR Robusto</strong> - 800 lei<br>Notes: Earth, chocolate, pepper.</li>
+                <li><strong>Rocky Patel Grand Reserve Toro</strong> - 700 lei<br>Notes: Leather, peanuts, red meat.</li>
+                <li><strong>Rocky Patel Vintage 1990 Deluxe Toro</strong> - 800 lei<br>Notes: Spices, nuts, chocolate, cedar.</li>
+                <li><strong>Rocky Patel Royale Sumatra Toro Tubo Deluxe</strong> - 1000 lei<br>Notes: Chocolate.</li>
+                <li><strong>Rocky Patel Edge Habano Toro</strong> - 530 lei<br>Notes: Brown sugar, berries.</li>
+                <li><strong>Bellas Artes Hybrid Gordo</strong> - 650 lei<br>Notes: Spicy.</li>
+                <li><strong>Bellas Artes Short Churchill</strong> - 550 lei<br>Notes: Spicy, espresso, cocoa.</li>
+                <li><strong>Horacio XL</strong> - 580 lei<br>Notes: Spices, earthy.</li>
+                <li><strong>Esteli Club 5</strong> - 270 lei<br>Notes: Spicy, wood.</li>
+                <li><strong>Horacio H5</strong> - 450 lei<br>Notes: Wood, cocoa, nuts.</li>
+                <li><strong>Bellas Artes Maduro Toro</strong> - 600 lei<br>Notes: Almonds, dark chocolate, vanilla.</li>
+                <li><strong>San Lotano Requiem Maduro Robusto</strong> - 350 lei<br>Notes: Chocolate, roasted nuts, pepper.</li>
+                <li><strong>Last Call Maduro Flaquitas</strong> - 350 lei<br>Notes: Pepper, cedar, walnut, cinnamon.</li>
+                <li><strong>Enclave Broadleaf Robusto</strong> - 400 lei<br>Notes: Chocolate, earth, coffee.</li>
+                <li><strong>San Lotano The Bull Robusto</strong> - 430 lei<br>Notes: Earth, cinnamon, coffee, leather.</li>
+                <li><strong>Horacio Colosso</strong> - 580 lei<br>Notes: Wood, earthy, creamy.</li>
+                <li><strong>Horacio Maduro H1</strong> - 620 lei<br>Notes: Wood, herbs.</li>
+                <li><strong>Horacio XXL</strong> - 1000 lei<br>Notes: White pepper, leather, herbs.</li>
+                <li><strong>El Baton Double Torpedo</strong> - 450 lei<br>Notes: Nuts, coffee, cocoa, spicy seasonings.</li>
+                <li><strong>El Baton Double Toro</strong> - 450 lei<br>Notes: Spices.</li>
+                <li><strong>Enclave Churchill</strong> - 550 lei<br>Notes: Spices, pepper, sweet cedar, cinnamon.</li>
+                <li><strong>Luis Martinez Tres Petit Corona</strong> - 130 lei<br>Notes: Sweet.</li>
+                <li><strong>Luis Martinez Crystal Robusto</strong> - 350 lei<br>Notes: Sweet.</li>
+                <li><strong>Blend 15 Toro</strong> - 300 lei<br>Notes: Earthy, leather, spicy.</li>
+                <li><strong>Quorum Classic Corona</strong> - 150 lei<br>Notes: Nuts.</li>
+              </ul>
+            </div>
+          </div>
+
+
+          <!-- Dominican Republic Section -->
+          <div class="col-lg-6 menu-item isotope-item filter-dominican">
+            <div class="menu-content">
+              <h3>Dominican Republic</h3>
+            </div>
+            <div class="menu-ingredients">
+              <ul>
+                <li><strong>FD La Nox</strong> - 1000 lei<br>Notes: Oak, paprika, cocoa.</li>
+                <li><strong>Andalusian Bull</strong> - 1200 lei<br>Notes: Nuts, leather, mint ice cream.</li>
+                <li><strong>LFD Ligero Cabinet Mysterio Oscuro Nat</strong> - 1300 lei<br>Notes: Wood, dark chocolate.</li>
+                <li><strong>LFD Oro Chisel Tubo</strong> - 1000 lei<br>Notes: Cedar, leather, ginger.</li>
+                <li><strong>Diamond Crown Robusto No.5</strong> - 500 lei<br>Notes: Almonds, pepper, citric, vanilla, oak, leather.</li>
+                <li><strong>LFD Salomon Unico</strong> - 2000 lei<br>Notes: Cream, salted butter, cedar.</li>
+                <li><strong>Cuesta Rey Cameo tins</strong> - 1700 lei</li>
+              </ul>
+            </div>
+          </div>
+
+
+          <!-- Mexico Section -->
+          <div class="col-lg-6 menu-item isotope-item filter-mexico">
+            <div class="menu-content">
+              <h3>Mexico</h3>
+            </div>
+            <div class="menu-ingredients">
+              <ul>
+                <li><strong>Casa Turrent 1880 Claro Double Robusto</strong> - 450 lei<br>Notes: Earthy, caramel, leather, cinnamon, nuts, dried fruits, sweet, wood.</li>
+                <li><strong>Casa Turrent 1901 Gran Robusto</strong> - 350 lei<br>Notes: Roasted almonds, spicy cocoa, wood.</li>
+                <li><strong>Casa Turrent 1901 Robusto Maduro Round</strong> - 250 lei<br>Notes: Hazelnuts, coffee, wood, cinnamon.</li>
+                <li><strong>Casa Turrent 1942 Gran Robusto</strong> - 350 lei<br>Notes: Spices.</li>
+                <li><strong>Casa Turrent 1942 Robusto Natural Round</strong> - 250 lei<br>Notes: Spices.</li>
+                <li><strong>Casa Turrent 1973 Gran Robusto Natural</strong> - 350 lei<br>Notes: Black tea, cinnamon.</li>
+                <li><strong>A. Turrent Tradicional Robusto Glass</strong> - 400 lei<br>Notes: Liquorice.</li>
+                <li><strong>SC 1830 SE Corona 6/44</strong> - 270 lei<br>Notes: Hazelnuts.</li>
+                <li><strong>SC 1830 SE Churchill 7/50</strong> - 350 lei<br>Notes: Hazelnuts, cream.</li>
+                <li><strong>Veracruz Corona Maduro 6.1/4./42</strong> - 150 lei<br>Notes: Earthy, cedar, leather.</li>
+                <li><strong>Capa Flor Robusto Maduro</strong> - 250 lei<br>Notes: Pepper, chocolate, earthy.</li>
+                <li><strong>Capa Flor Robusto Habano 5/50</strong> - 250 lei<br>Notes: Cinnamon.</li>
+                <li><strong>Capa Flor Robusto Connecticut 5/50</strong> - 250 lei<br>Notes: Nuts, vanilla.</li>
+                <li><strong>Veracruz Robusto Maduro 5 1/2./52</strong> - 170 lei<br>Notes: Coffee.</li>
+                <li><strong>Santa Clara 1830</strong> - 250 lei<br>Notes: Cedar.</li>
+                <li><strong>SC 1830 Quino</strong> - 100 lei<br>Notes: Nuts, coffee.</li>
+                <li><strong>Jacobus Sumatra Senoritas</strong> - 100 lei<br>Notes: Cedar.</li>
+                <li><strong>Jacobus Dominican Senoritas</strong> - 60 lei<br>Notes: Cedar.</li>
+                <li><strong>Chicos Cherry</strong> - 300 lei<br>Notes: Cherries.</li>
+                <li><strong>Chicos Vanilla</strong> - 300 lei<br>Notes: Vanilla.</li>
+                <li><strong>Chicos Chocolate</strong> - 300 lei<br>Notes: Chocolate.</li>
+                <li><strong>Chicos Natural</strong> - 300 lei<br>Notes: Tobacco.</li>
+                <li><strong>SC Madrigal Picador Robusto 4.1/2./50</strong> - 110 lei<br>Notes: Cedar, coffee, spicy seasonings.</li>
+                <li><strong>Hacienda Veracruz Bnd Short Robusto 4/50</strong> - 100 lei<br>Notes: Cedar, coffee.</li>
+                <li><strong>SC Hacienda Veracruz Media Corona</strong> - 90 lei<br>Notes: Cedar, coffee.</li>
+                <li><strong>Casa Turrent Caribe</strong> - 250 lei<br>Notes: Caramel, hazelnuts, wood.</li>
+                <li><strong>Casa Turrent Cuba</strong> - 250 lei<br>Notes: Caramel, hazelnuts, wood.</li>
+                <li><strong>Casa Turrent Nicaragua</strong> - 250 lei<br>Notes: Caramel, sweet spices, hazelnuts, chocolate.</li>
+                <li><strong>Casa Turrent San Andres</strong> - 250 lei<br>Notes: Earthy, cocoa, wood.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Cigar Sets Section -->
+          <div class="col-lg-6 menu-item isotope-item filter-sets">
+            <div class="menu-content">
+              <h3>Cigar Sets</h3>
+            </div>
+            <div class="menu-ingredients">
+              <ul>
+                <li><strong>Santa Clara Glam Sampler</strong> - 2500 lei<br>Origin: Mexico</li>
+                <li><strong>Brick House Nic. Sesenta Sampler 4</strong> - 1800 lei<br>Origin: Nicaragua</li>
+                <li><strong>LFD La Petit Nox</strong> - 1700 lei<br>Origin: Dominican Republic</li>
+                <li><strong>Brick House Mighty Sampler 4</strong> - 1600 lei<br>Origin: Nicaragua</li>
+                <li><strong>Rocky Patel Vin.1999 Juniors Tin</strong> - 1000 lei<br>Origin: Nicaragua</li>
+                <li><strong>SC Capa Flor Robusto Selection 3</strong> - 750 lei<br>Origin: Mexico</li>
+              </ul>
+            </div>
+          </div>
+
+
+        </div><!-- Menu Container -->
+
+      </div>
+
+    </section><!-- /Menu Section -->
+
+
+    <!-- Book A Table Section -->
+    <section id="book-a-table" class="book-a-table section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>RESERVATION</h2>
+        <p>Book a Table</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-04013290-48cb-4222-8208-46c454c576e0" data-elfsight-app-lazy></div>
+
+      </div>
+
+    </section><!-- /Book A Table Section -->
 
     </section>
 
@@ -901,6 +550,7 @@
 
     </div>
   </div>
+
 
   <div class="container copyright text-center mt-4">
     <p>© <span>Copyright</span> <strong class="px-1 sitename">Churchill's</strong> <span>All Rights Reserved</span></p>
