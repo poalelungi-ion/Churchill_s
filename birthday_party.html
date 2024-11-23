@@ -23,6 +23,22 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <style>
+    .responsive-form-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 177%; /* Aspect ratio for the form (height/width) */
+      overflow: hidden;
+    }
+    .responsive-form-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -97,13 +113,25 @@
     <section id="starter-section" class="starter-section section">
 
 
-      <!-- Gallery Section -->
-      <section id="gallery" class="gallery section">
-        <!-- Section Title -->
-        <script src="https://static.elfsight.com/platform/platform.js" async></script>
-        <div class="elfsight-app-5ad604e1-4bc1-48ed-a935-39fe97cc6adb" data-elfsight-app-lazy></div>
-      </section><!-- /Gallery Section -->
 
+      <!-- Book A Table Section -->
+      <section id="book-a-table" class="book-a-table section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Leave a Review</h2>
+          <p>How was your experience</p>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="responsive-form-container">
+            <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSezzRkN-dUv32smWJM3yy6Tj7VEgXu7SRHArMEEXyznoYj-mg/viewform?embedded=true"
+                    allowfullscreen
+                    scrolling="auto">
+            </iframe>
+          </div>
+          </div>
+      </section><!-- /Book A Table Section -->
 
     </section>
 
