@@ -349,22 +349,86 @@
 
 
     <!-- Book A Table Section -->
-    <section id="book-a-table" class="book-a-table section">
+    <section id="starter-section" class="starter-section section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>RESERVATION</h2>
-        <p>Book a Table</p>
-      </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <script src="https://static.elfsight.com/platform/platform.js" async></script>
-        <div class="elfsight-app-04013290-48cb-4222-8208-46c454c576e0" data-elfsight-app-lazy></div>
+      <!-- Book A Table Section -->
+      <section id="book-a-table" class="book-a-table section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Want to Have a nignt in ?</h2>
+          <p>Book a Table</p>
+        </div><!-- End Section Title -->
 
-      </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <form id="reviewForm" class="php-email-form">
+            <div class="row gy-4">
+              <div class="col-lg-4 col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" required>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <input type="date" name="date" class="form-control" id="date" required>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <input type="time" class="form-control" name="time" id="time" required>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <input type="number" class="form-control" name="people" id="people" placeholder="How many People" required min="1" max="10">
+              </div>
+            </div>
 
-    </section><!-- /Book A Table Section -->
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" id="message" rows="5" placeholder="Review" required></textarea>
+            </div>
+
+            <div class="text-center mt-3">
+              <div class="loading" style="display: none;">Loading...</div>
+              <div class="error-message" style="display: none;"></div>
+              <div class="sent-message" style="display: none;">Your review was sent successfully!</div>
+              <button type="submit">Book Table</button>
+            </div>
+          </form>
+
+          <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+          <script>
+            (function() {
+              emailjs.init("g0SR_j3Vk43cZd3qL"); // Replace with your public key
+            })();
+
+            document.getElementById('reviewForm').addEventListener('submit', function(event) {
+              event.preventDefault();
+
+              // Show loading
+              document.querySelector('.loading').style.display = 'block';
+
+              // Hide any previous messages
+              document.querySelector('.sent-message').style.display = 'none';
+              document.querySelector('.error-message').style.display = 'none';
+
+              // Send the form data via EmailJS
+              emailjs.sendForm("service_9hw9ay7", "template_6qn5dde", this)
+                      .then(() => {
+                        document.querySelector('.loading').style.display = 'none';
+                        document.querySelector('.sent-message').style.display = 'block';
+                      }, (error) => {
+                        document.querySelector('.loading').style.display = 'none';
+                        document.querySelector('.error-message').textContent = 'An error occurred. Please try again.';
+                        document.querySelector('.error-message').style.display = 'block';
+                        console.error("EmailJS error:", error);
+                      });
+            });
+          </script>
+        </div>
+      </section><!-- /Book A Table Section -->
+
+    </section>
 
 <!--    &lt;!&ndash; Testimonials Section &ndash;&gt;-->
 <!--    <section id="testimonials" class="testimonials section">-->
@@ -765,7 +829,7 @@
   <div id="reviewPopup" class="review-popup">
     <div class="popup-content">
       <button class="close-btn" onclick="closePopup()"><i class="bi bi-x-circle"></i> </button>
-      
+      <h3>How was your experience ?</h3>
       <a><br></a>
       <a href="review.html" class="btn-review">Leave a Review</a>
     </div>
