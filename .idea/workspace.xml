@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf834467-07cd-48b3-ada1-b2d23e1ed091" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/bar_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/bar_menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/birthday_party.html" beforeDir="false" afterPath="$PROJECT_DIR$/birthday_party.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cigar_club.html" beforeDir="false" afterPath="$PROJECT_DIR$/cigar_club.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cigar_shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/cigar_shop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cotailparty.html" beforeDir="false" afterPath="$PROJECT_DIR$/cotailparty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu_cigar.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu_cigar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menus.html" beforeDir="false" afterPath="$PROJECT_DIR$/menus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/review.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +77,7 @@
       <workItem from="1732380238091" duration="2663000" />
       <workItem from="1732385155484" duration="2020000" />
       <workItem from="1736504144924" duration="3801000" />
-      <workItem from="1748538107628" duration="1176000" />
+      <workItem from="1748538107628" duration="1699000" />
     </task>
     <servers />
   </component>

@@ -64,13 +64,13 @@
         <ul>
           <li><a href="index.html" class="active">Home<br></a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="menu.html">Menu</a></li>
+          <li><a href="review.html">Menu</a></li>
           <li><a href="bar_menu.html">Bar</a></li>
           <li><a href="menu_cigar.html">Cigar Club</a></li>
           <li><a href="#events">Events</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="review.html">FeedBack</a></li>
+          <li><a href="menu.html">FeedBack</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -99,79 +99,84 @@
 
 
     <!-- Book A Table Section -->
-    <section id="book-a-table" class="book-a-table section">
+    <!-- Chefs Section -->
+    <section id="partys" class="chefs section">
+
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Leave a Review</h2>
-        <p>How was your experience</p>
+        <h2>Churchill's</h2>
+        <p>Menus</p>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <form id="reviewForm" class="php-email-form">
-          <div class="row gy-4">
-            <div class="col-lg-4 col-md-6">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+      <div class="container">
+
+        <div class="row gy-4" style="justify-content: center">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <h4><a href="menu_cigar.html">Cigar Menu</a></h4>
+            <div class="member">
+
+              <img src="assets/img/crigar_louge.png" class="img-fluid" alt="">
+
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4><a href="menu_cigar.html">Cigar Menu</a></h4>
+                  <span></span>
+                </div>
+                <div class="social">
+
+
+                </div>
+              </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <h4><a href="menu_bar.html">Bar Menu</a></h4>
+            <div class="member">
+
+              <img src="assets/img/hwysky_menu.png" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4><a href="bar_menu.html">Bar Menu</a></h4>
+                  <span></span>
+                </div>
+                <div class="social">
+
+
+                </div>
+              </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" required>
+          </div><!-- End Team Member -->
+
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <h4><a href="menu.html">Food Menu</a></h4>
+            <div class="member">
+
+              <img src="assets/img/food_menu.png" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4><a href="menu.html">Food Menu</a></h4>
+                  <span>Delicious Meals </span>
+                </div>
+                <div class="social">
+
+
+                </div>
+              </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <input type="date" name="date" class="form-control" id="date" required>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <input type="time" class="form-control" name="time" id="time" required>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <input type="number" class="form-control" name="people" id="people" placeholder="Rate from 1 to 10" required min="1" max="10">
-            </div>
-          </div>
+          </div><!-- End Team Member -->
 
-          <div class="form-group mt-3">
-            <textarea class="form-control" name="message" id="message" rows="5" placeholder="Review" required></textarea>
-          </div>
 
-          <div class="text-center mt-3">
-            <div class="loading" style="display: none;">Loading...</div>
-            <div class="error-message" style="display: none;"></div>
-            <div class="sent-message" style="display: none;">Your review was sent successfully!</div>
-            <button type="submit">Send Review</button>
-          </div>
-        </form>
 
-        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-        <script>
-          (function() {
-            emailjs.init("g0SR_j3Vk43cZd3qL"); // Replace with your public key
-          })();
+        </div>
 
-          document.getElementById('reviewForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            // Show loading
-            document.querySelector('.loading').style.display = 'block';
-
-            // Hide any previous messages
-            document.querySelector('.sent-message').style.display = 'none';
-            document.querySelector('.error-message').style.display = 'none';
-
-            // Send the form data via EmailJS
-            emailjs.sendForm("service_9hw9ay7", "template_6qn5dde", this)
-                    .then(() => {
-                      document.querySelector('.loading').style.display = 'none';
-                      document.querySelector('.sent-message').style.display = 'block';
-                    }, (error) => {
-                      document.querySelector('.loading').style.display = 'none';
-                      document.querySelector('.error-message').textContent = 'An error occurred. Please try again.';
-                      document.querySelector('.error-message').style.display = 'block';
-                      console.error("EmailJS error:", error);
-                    });
-          });
-        </script>
       </div>
-    </section><!-- /Book A Table Section -->
+
+    </section><!-- /Chefs Section -->
+
+
 
   </section>
 
