@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Churchill's</title>
+  <title>Churchill's - Whisky Bar & Pub Chisinau</title>
   <meta name="description" content="Churchill's: A sophisticated English-style lounge in Europe offering premium whisky, fine cigars, and an inviting atmosphere. Experience authentic British charm with a range of craft beers, gourmet pub food, and curated events. Perfect for connoisseurs and cigar lovers seeking a refined night out.">
   <meta name="keywords" content="Whisky lounge, cigar bar, English pub, craft beer, IPA, premium whisky, whisky tasting, cigars, English-style bar, cozy lounge, live music bar, private events, fine cigars, gourmet burgers, British ale, traditional pub food, signature cocktails, gentlemen's club, nightlife, draught beer, Scotch whisky, whisky flights, outdoor seating, elegant cocktails, evening lounge,churchill's whisky bar, rum, tasting, private zone, gentleman, gentleman club, churchill bar, churchills Chisinau, atmosphere, dine in, restaurant">
   <meta name="google-site-verification" content="pgfwUaY1R3rm3j7GPod91tesvyGAUjoq62Fwd3hrGLA" />
@@ -31,7 +31,6 @@
   <meta name="keywords" content="whisky Chișinău, lounge trabucuri Moldova, evenimente private Chișinău, whisky premium Moldova">
   <meta name="author" content="Churchill's Lounge Bar">
   <link rel="canonical" href="https://www.churchills.md/">
-  <link rel="stylesheet" href="styles.css">
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
@@ -50,12 +49,24 @@
           <a href="https://www.facebook.com/pages/Churchill%20whisky%20bar/491686447660723/"> <i class="bi bi-facebook"></i> </a>
           <a href="https://www.instagram.com/churchills_whiskybar/"> <i class="bi bi-instagram"></i> </a>
         </div>
-<!--        <div class="languages d-none d-md-flex align-items-center">-->
-<!--          <ul>-->
-<!--            <li>En</li>-->
-<!--            <li><a href="#">Ro</a></li>-->
-<!--          </ul>-->
-<!--        </div>-->
+      <div class="languages d-flex align-items-center language-switcher">
+        <select id="language-select">
+          <option value="en">EN</option>
+          <option value="ro">RO</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="it">IT</option>
+        </select>
+      </div>
+      <div class="languages d-flex align-items-center language-switcher">
+        <select id="language-select">
+          <option value="en">EN</option>
+          <option value="ro">RO</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="it">IT</option>
+        </select>
+      </div>
       </div>
     </div><!-- End Top Bar -->
 
@@ -102,11 +113,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 d-flex flex-column align-items-center align-items-lg-start">
-            <h2 data-aos="fade-up" data-aos-delay="100">Welcome to <span>Churchill's</span></h2>
-             <a href="review.html" class="cta-btn">Our Menu</a>
+            <h2 data-aos="fade-up" data-aos-delay="100"><span data-i18n="welcome">Welcome to</span> <span>Churchill's</span></h2>
+             <a href="menu.html" class="cta-btn" data-i18n="hero_btn_menu">Our Menu</a>
             <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
-              <a href="menu_cigar.html" class="cta-btn">Cigar Club</a>
-              <a href="bar_menu.html" class="cta-btn">Bar</a>
+              <a href="menu_cigar.html" class="cta-btn" data-i18n="hero_btn_cigar">Cigar Club</a>
+              <a href="bar_menu.html" class="cta-btn" data-i18n="hero_btn_bar">Bar</a>
 
             </div>
           </div>
@@ -156,8 +167,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>WHY US</h2>
-        <p>Why Choose Churchill’s Whisky Bar</p>
+        <h2 data-i18n="why_us">WHY US</h2>
+        <p data-i18n="why_choose">Why Choose Churchill’s Whisky Bar</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -194,7 +205,6 @@
       </div>
 
     </section><!-- /Why Us Section -->
-
 
     <!-- Chefs Section -->
     <section id="partys" class="chefs section">
@@ -359,8 +369,8 @@
       <section id="book-a-table" class="book-a-table section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Want to Have a nignt in ?</h2>
-          <p>Book a Table</p>
+          <h2 data-i18n="reservation">RESERVATION</h2>
+          <p data-i18n="book_table">Book a Table</p>
         </div><!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -704,7 +714,7 @@
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
-                <h3>Location</h3>
+                <h3 data-i18n="location">Location</h3>
                 <a href="https://maps.app.goo.gl/nSpRmfGnjKV1yz8z6">Strada Mitropolit Gavriil Bănulescu-Bodoni 22, Chișinău, Moldova</a>
               </div>
             </div><!-- End Info Item -->
@@ -712,7 +722,7 @@
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-telephone flex-shrink-0"></i>
               <div>
-                <h3>Open Hours</h3>
+                <h3 data-i18n="open_hours">Open Hours</h3>
                 <p>Monday-Saturday:<br>12:00 AM - 02.00 AM</p>
               </div>
             </div><!-- End Info Item -->
@@ -720,7 +730,7 @@
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-telephone flex-shrink-0"></i>
               <div>
-                <h3>Call Us</h3>
+                <h3 data-i18n="call_us">Call Us</h3>
                 <p>+373 688 92 089</p>
               </div>
             </div><!-- End Info Item -->
@@ -728,7 +738,7 @@
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
-                <h3>Email Us</h3>
+                <h3 data-i18n="email_us">Email Us</h3>
                 <p>churchillswhiskybar@gmail.com</p>
               </div>
             </div><!-- End Info Item -->
@@ -792,7 +802,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Churchill's</strong> <span>All Rights Reserved</span></p>
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">Churchill's</strong> <span data-i18n="rights_reserved">All Rights Reserved</span></p>
 
     </div>
 

@@ -986,6 +986,7 @@ section,
   padding: 8px 30px;
   border-radius: 50px;
   transition: 0.3s;
+  border-radius: 50px; /* Rounded buttons */
   flex-shrink: 0;
 }
 
@@ -1070,6 +1071,7 @@ section,
 .about .about-img {
   border: 6px solid color-mix(in srgb, var(--default-color), transparent 80%);
   transition: 0.3s;
+  border-radius: 24px; /* Rounded corners for images */
 }
 
 .about .about-img:hover {
@@ -1085,6 +1087,7 @@ section,
   transition: all ease-in-out 0.3s;
   height: 100%;
   position: relative;
+  border-radius: 24px; /* Rounded corners for cards */
 }
 
 .why-us .card-item span {
@@ -1251,6 +1254,8 @@ section,
   border-right: 2px solid var(--accent-color);
   font-weight: 600;
   font-size: 15px;
+  border-radius: 12px; /* Rounded tabs */
+  margin-bottom: 5px;
 }
 
 .specials .nav-link:hover {
@@ -1421,6 +1426,7 @@ section,
   color: var(--default-color);
   background-color: color-mix(in srgb, var(--background-color), transparent 20%);
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 12px; /* Rounded inputs */
 }
 
 .book-a-table .php-email-form input[type=text]:focus,
@@ -1518,6 +1524,7 @@ section,
   border-radius: 6px;
   position: relative;
   z-index: 1;
+  border-radius: 24px; /* Rounded testimonials */
 }
 
 .testimonials .swiper-wrapper {
@@ -1548,6 +1555,7 @@ section,
   overflow: hidden;
   border-right: 3px solid var(--background-color);
   border-bottom: 3px solid var(--background-color);
+  border-radius: 16px; /* Rounded gallery items */
 }
 
 .gallery .gallery-item img {
@@ -1669,6 +1677,7 @@ section,
   border-radius: 4px;
   transition: all 0.3s ease-in-out;
   margin-right: 15px;
+  border-radius: 50%; /* Fully rounded icons */
 }
 
 .contact .info-item h3 {
@@ -1698,6 +1707,7 @@ section,
   color: var(--default-color);
   background-color: color-mix(in srgb, var(--background-color), transparent 50%);
   border-color: color-mix(in srgb, var(--accent-color), transparent 70%);
+  border-radius: 12px; /* Rounded inputs */
 }
 
 .contact .php-email-form input[type=text]:focus,
@@ -1756,7 +1766,7 @@ section,
   width: 80%;
   max-width: 400px;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 24px; /* Rounded popup */
   position: relative;
   color: var(--default-color);
   font-family: var(--default-font);
@@ -1777,7 +1787,7 @@ section,
   background-color: var(--accent-color);
   color: var(--contrast-color);
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 50px; /* Rounded button */
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
@@ -1798,3 +1808,129 @@ section,
   cursor: pointer;
 }
 
+/* --------------------------------------------------------------
+# Newspaper Menu Theme
+-------------------------------------------------------------- */
+.newspaper-menu {
+  background-color: #0c0b09; /* Black background */
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+}
+
+.newspaper-menu .section-title h2 {
+  color: #cda45e;
+  font-size: 3rem;
+  text-transform: uppercase;
+  border-bottom: 3px double #cda45e;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.newspaper-menu .menu-filters li {
+  color: #0c0b09;
+  background-color: #f4f1ea;
+  border: 1px solid #cda45e;
+  margin: 2px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 20px; /* Rounded filters */
+}
+
+.newspaper-menu .menu-filters li:hover,
+.newspaper-menu .menu-filters li.filter-active {
+  color: #ffffff;
+  background-color: #cda45e;
+  text-decoration: underline;
+}
+
+.newspaper-menu .menu-item {
+  margin-top: 20px;
+  border-bottom: 1px solid #333; /* Dark separator */
+  padding-bottom: 15px;
+}
+
+.newspaper-menu .menu-content {
+  margin-left: 0; /* Reset margin since images are removed */
+}
+
+.newspaper-menu .menu-content a {
+  color: #ffffff;
+  background: #0c0b09;
+}
+
+.newspaper-menu .menu-content span {
+  color: #cda45e;
+  background: #0c0b09;
+}
+
+.newspaper-menu .menu-content::after {
+  content: none; /* Remove the dotted leader lines */
+}
+
+.newspaper-menu .menu-ingredients {
+  margin-left: 0; /* Reset margin */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.05rem;
+  color: #cccccc;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+/* Mobile Filter Dropdown */
+.mobile-filter-container {
+  display: none;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+@media (max-width: 991px) {
+  .newspaper-menu .menu-filters { display: none; }
+  .mobile-filter-container { display: block; }
+}
+
+/* Language Switcher */
+.language-switcher {
+  margin-left: 20px;
+}
+
+.language-switcher select {
+  background-color: transparent;
+  color: var(--default-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 8px;
+}
+
+.language-switcher select:hover, .language-switcher select:focus {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  outline: none;
+}
+
+.language-switcher option {
+  background-color: var(--background-color);
+  color: var(--default-color);
+}
+
+/* Modern Button Hover Effects (Material Design inspired) */
+.cta-btn, .btn-book-a-table, button[type=submit] {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover, .btn-book-a-table:hover, button[type=submit]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(205, 164, 94, 0.4);
+}

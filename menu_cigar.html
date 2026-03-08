@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Churchill's</title>
+  <title>Cigar Club - Churchill's Lounge</title>
   <meta name="description" content="Churchill's: A sophisticated English-style lounge in Europe offering premium whisky, fine cigars, and an inviting atmosphere. Experience authentic British charm with a range of craft beers, gourmet pub food, and curated events. Perfect for connoisseurs and cigar lovers seeking a refined night out.">
   <meta name="keywords" content="Whisky lounge, cigar bar, English pub, craft beer, IPA, premium whisky, whisky tasting, cigars, English-style bar, cozy lounge, live music bar, private events, fine cigars, gourmet burgers, British ale, traditional pub food, signature cocktails, gentlemen's club, nightlife, draught beer, Scotch whisky, whisky flights, outdoor seating, elegant cocktails, evening lounge,churchill's whisky bar, rum, tasting, private zone, gentleman, gentleman club, churchill bar, churchills Chisinau, atmosphere, dine in, restaurant">
   <meta name="google-site-verification" content="pgfwUaY1R3rm3j7GPod91tesvyGAUjoq62Fwd3hrGLA" />
@@ -44,37 +44,17 @@
         <a href="https://www.facebook.com/pages/Churchill%20whisky%20bar/491686447660723/"> <i class="bi bi-facebook"></i> </a>
         <a href="https://www.instagram.com/churchills_whiskybar/"> <i class="bi bi-instagram"></i> </a>
       </div>
-      <div id="google_translate_element" style="display: none;"></div>
-
-<!--      <div class="languages d-none d-md-flex align-items-center">-->
-<!--        <ul>-->
-<!--          <li><a href="#" onclick="translatePage('en')">En</a></li>-->
-<!--          <li><a href="#" onclick="translatePage('ro')">Ro</a></li>-->
-<!--        </ul>-->
-<!--      </div>-->
-
+      <div class="languages d-flex align-items-center language-switcher">
+        <select id="language-select">
+          <option value="en">EN</option>
+          <option value="ro">RO</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="it">IT</option>
+        </select>
+      </div>
     </div>
   </div><!-- End Top Bar -->
-  <script type="text/javascript">
-    function translatePage(language) {
-      var translateDropdown = document.querySelector(".goog-te-combo");
-      if (translateDropdown) {
-        translateDropdown.value = language;
-        translateDropdown.dispatchEvent(new Event("change"));
-      }
-    }
-  </script>
-
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,ro',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
-    }
-  </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <div class="branding d-flex align-items-cente">
 
@@ -119,11 +99,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 d-flex flex-column align-items-center align-items-lg-start">
-          <h2 data-aos="fade-up" data-aos-delay="100">Welcome to <span>Churchill's</span> Cigar Club</h2>
+          <h2 data-aos="fade-up" data-aos-delay="100"><span data-i18n="welcome">Welcome to</span> <span>Churchill's</span> Cigar Club</h2>
 
           <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
-            <a href="#menu" class="cta-btn">Cigar Menu</a>
-            <a href="#membership" class="cta-btn">Our Memberships</a>
+            <a href="#menu" class="cta-btn" data-i18n="cigar_menu">Cigar Menu</a>
+            <a href="#membership" class="cta-btn" data-i18n="memberships">Our Memberships</a>
 
           </div>
         </div>
@@ -143,8 +123,8 @@
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-      <h2>WHY US</h2>
-      <p>Why Choose Churchill's Cigar Club</p>
+      <h2 data-i18n="why_us">WHY US</h2>
+      <p data-i18n="why_choose">Why Choose Churchill's Cigar Club</p>
     </div><!-- End Section Title -->
 
     <div class="container">
@@ -187,8 +167,8 @@
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-      <h2>Join Our Club</h2>
-      <p>GENTELMEN'S PRIVATE CLUB</p>
+      <h2 data-i18n="join_club">Join Our Club</h2>
+      <p data-i18n="gentlemen_club">GENTELMEN'S PRIVATE CLUB</p>
     </div><!-- End Section Title -->
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -301,8 +281,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Cigar Menu</h2>
-        <p>Explore Our Premium Cigars Collection</p>
+        <h2 data-i18n="cigar_menu">Cigar Menu</h2>
+        <p data-i18n="check_menu">Explore Our Premium Cigars Collection</p>
       </div>
 
       <div class="container isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
@@ -492,8 +472,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>RESERVATION</h2>
-        <p>Book a Table</p>
+        <h2 data-i18n="reservation">RESERVATION</h2>
+        <p data-i18n="book_table">Book a Table</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -554,7 +534,7 @@
 
 
   <div class="container copyright text-center mt-4">
-    <p>© <span>Copyright</span> <strong class="px-1 sitename">Churchill's</strong> <span>All Rights Reserved</span></p>
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">Churchill's</strong> <span data-i18n="rights_reserved">All Rights Reserved</span></p>
 
   </div>
 

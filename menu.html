@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Churchill's</title>
+  <title>Food Menu - Churchill's Pub</title>
   <meta name="description" content="Churchill's: A sophisticated English-style lounge in Europe offering premium whisky, fine cigars, and an inviting atmosphere. Experience authentic British charm with a range of craft beers, gourmet pub food, and curated events. Perfect for connoisseurs and cigar lovers seeking a refined night out.">
   <meta name="keywords" content="Whisky lounge, cigar bar, English pub, craft beer, IPA, premium whisky, whisky tasting, cigars, English-style bar, cozy lounge, live music bar, private events, fine cigars, gourmet burgers, British ale, traditional pub food, signature cocktails, gentlemen's club, nightlife, draught beer, Scotch whisky, whisky flights, outdoor seating, elegant cocktails, evening lounge,churchill's whisky bar, rum, tasting, private zone, gentleman, gentleman club, churchill bar, churchills Chisinau, atmosphere, dine in, restaurant">
   <meta name="google-site-verification" content="pgfwUaY1R3rm3j7GPod91tesvyGAUjoq62Fwd3hrGLA" />
@@ -43,12 +43,15 @@
         <a href="https://www.facebook.com/pages/Churchill%20whisky%20bar/491686447660723/"> <i class="bi bi-facebook"></i> </a>
         <a href="https://www.instagram.com/churchills_whiskybar/"> <i class="bi bi-instagram"></i> </a>
       </div>
-<!--      <div class="languages d-none d-md-flex align-items-center">-->
-<!--        <ul>-->
-<!--          <li>En</li>-->
-<!--          <li><a href="#">Ro</a></li>-->
-<!--        </ul>-->
-<!--      </div>-->
+      <div class="languages d-flex align-items-center language-switcher">
+        <select id="language-select">
+          <option value="en">EN</option>
+          <option value="ro">RO</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="it">IT</option>
+        </select>
+      </div>
     </div>
   </div><!-- End Top Bar -->
 
@@ -99,27 +102,64 @@
 
 
       <!-- Menu Section -->
-      <section id="menu" class="menu section">
+      <section id="menu" class="menu section newspaper-menu">
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Menu</h2>
-          <p>Check Our Tasty Menu</p>
+          <h2 data-i18n="nav_menu">Menu</h2>
+          <p data-i18n="check_menu">Check Our Tasty Menu</p>
         </div><!-- End Section Title -->
 
         <div class="container isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-          <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="row" data-aos="fade-up" data-aos-delay="100" id="filters-container">
+            <!-- Mobile Filter Dropdown -->
+            <div class="col-12 mobile-filter-container">
+              <select class="form-select" id="mobile-filter-select" style="background-color: #f4f1ea; color: #0c0b09; border: 1px solid #cda45e; font-family: 'Playfair Display', serif;">
+                <option value="*">All Menu</option>
+                <option value=".filter-night">APPETIZER OF THE NIGHT</option>
+                <option value=".filter-beer">Beer Appetizers</option>
+                <option value=".filter-amazing">AMAZING APPETIZERS</option>
+                <option value=".filter-fish-app">-- FISH</option>
+                <option value=".filter-meat-app">-- MEAT</option>
+                <option value=".filter-salads">SALADS</option>
+                <option value=".filter-soups">SOUPS</option>
+                <option value=".filter-main">MAIN COURSE</option>
+                <option value=".filter-beef">-- BEEF</option>
+                <option value=".filter-poultry">-- POULTRY</option>
+                <option value=".filter-pork">-- PORK</option>
+                <option value=".filter-seafood">-- FISH & SEAFOOD</option>
+                <option value=".filter-special">Special Gourmet Dinner</option>
+                <option value=".filter-dessert">DESSERT</option>
+              </select>
+            </div>
+
             <div class="col-lg-12 d-flex justify-content-center">
-              <ul class="menu-filters isotope-filters">
+              <ul class="menu-filters isotope-filters" id="main-filters">
                 <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-breakfast">Breakfast</li>
-                <li data-filter=".filter-appetizers">Appetizers</li>
-                <li data-filter=".filter-salads">Salads</li>
-                <li data-filter=".filter-soups">Soups</li>
-                <li data-filter=".filter-main">Main Dishes</li>
-                <li data-filter=".filter-burgers-sandwiches">Burgers & Sandwiches</li>
-                <li data-filter=".filter-sides">Side Dishes</li>
+              <li data-filter=".filter-night">APPETIZER OF THE NIGHT</li>
+              <li data-filter=".filter-beer">Beer Appetizers</li>
+              <li data-filter=".filter-amazing">AMAZING APPETIZERS</li>
+              <li data-filter=".filter-salads">SALADS</li>
+              <li data-filter=".filter-soups">SOUPS</li>
+              <li data-filter=".filter-main">MAIN COURSE</li>
+              <li data-filter=".filter-special">Special Gourmet Dinner by W.Churchill</li>
+              <li data-filter=".filter-dessert">DESSERT</li>
+              </ul>
+            </div>
+            <!-- Submenus -->
+            <div class="col-lg-12 d-flex justify-content-center submenu-container" id="submenu-amazing" style="display: none;">
+              <ul class="menu-filters isotope-filters">
+                <li data-filter=".filter-fish-app">FISH</li>
+                <li data-filter=".filter-meat-app">MEAT</li>
+              </ul>
+            </div>
+            <div class="col-lg-12 d-flex justify-content-center submenu-container" id="submenu-main" style="display: none;">
+              <ul class="menu-filters isotope-filters">
+                <li data-filter=".filter-beef">BEEF</li>
+                <li data-filter=".filter-poultry">POULTRY</li>
+                <li data-filter=".filter-pork">PORK</li>
+                <li data-filter=".filter-seafood">FISH & SEAFOOD</li>
               </ul>
             </div>
           </div><!-- Menu Filters -->
@@ -133,553 +173,687 @@
               });
             });
             </script>
-            <!-- Breakfast Items -->
-            <div class="col-lg-6 menu-item isotope-item filter-breakfast">
 
-              <a href="assets/img/menu/churchill_s_breakfast.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/churchill_s_breakfast.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-night">
               <div class="menu-content">
-                <a href="#">Churchill's Breakfast</a><span>120 MDL</span>
+                <a href="#">Appetizer of the Night</a><span>380 lei</span>
               </div>
               <div class="menu-ingredients">
-                fried eggs with spicy sausages, mushrooms, tomatoes, and beans flambe (350g)
+                Pecorino, caramelized nuts, chicken pate, guacamole, honey with coffee, nachos, young olives (390 gr)
               </div>
             </div>
 
-
-            <div class="col-lg-6 menu-item isotope-item filter-breakfast">
-              <a href="assets/img/menu/benedict.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/benedict.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-night">
               <div class="menu-content">
-                <a href="#">Eggs Benedict</a><span>160 MDL</span>
+                <a href="#">Beef Pastrami Ciabatta</a><span>220 lei</span>
               </div>
               <div class="menu-ingredients">
-                poached eggs with bacon and hollandaise sauce (270g)
+                Craft beef pastrami, cherry tomatoes, Gouda and Cheddar (250 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-breakfast">
-              <a href="assets/img/menu/omelette.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/omelette.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Omelette With Chicken Pastrami</a><span>90 MDL</span>
+                <a href="#">Beef jerky</a><span>145 lei</span>
               </div>
               <div class="menu-ingredients">
-                eggs, pastrami, cheese, mixed salad, hollandaise sauce (350g)
+                (100 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-breakfast">
-              <a href="assets/img/menu/omelette.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/omelette.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Omelette With Pork Pastrami</a><span>100 MDL</span>
+                <a href="#">Chicken jerky</a><span>145 lei</span>
               </div>
               <div class="menu-ingredients">
-                eggs, pastrami, cheese, mixed salad, hollandaise sauce (350g)
+                (100 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-breakfast">
-
-              <a href="assets/img/menu/mini_pankakes.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/mini_pankakes.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
-
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Cheese Pancakes</a><span>125 MDL</span>
+                <a href="#">Pork jerky</a><span>145 lei</span>
               </div>
               <div class="menu-ingredients">
-                sweet cheese donuts with seasonal fruits and jam (300g)
+                (100 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-breakfast">
-              <a href="assets/img/menu/oatmeal.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/oatmeal.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Oatmeal</a><span>90 MDL</span>
+                <a href="#">Horse jerky</a><span>145 lei</span>
               </div>
               <div class="menu-ingredients">
-                porridge with seasonal fruits and almonds (350g)
+                (100 gr)
               </div>
             </div>
 
-            <!-- Appetizers -->
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/jerky.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/jerky.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Beef Jerky</a><span>120 MDL</span>
+                <a href="#">Smoked Pork ears</a><span>100 lei</span>
               </div>
               <div class="menu-ingredients">
-                dehydrated beef meat (100g)
+                (100 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/jerky.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/jerky.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Chicken Jerky</a><span>100 MDL</span>
+                <a href="#">Crispy Pork ears</a><span>110 lei</span>
               </div>
               <div class="menu-ingredients">
-                dehydrated chicken meat (100g)
+                (150 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/jerky.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/jerky.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Pork Jerky</a><span>110 MDL</span>
+                <a href="#">Chicken fingers</a><span>145 lei</span>
               </div>
               <div class="menu-ingredients">
-                dehydrated pork meat (100g)
+                Chicken nuggets with french fries and aioli sauce (230 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/meat_and_chips.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/meat_and_chips.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Meat and Chips </a><span>110 MDL</span>
+                <a href="#">Cheese sticks</a><span>145 lei</span>
               </div>
               <div class="menu-ingredients">
-                beef meatballs in aromatic crust served with free batatas, roassted potatoes and blue cheese sauce (300g)
+                With mixed caramelized nuts and sweet chili sauce (260 gr)
               </div>
             </div>
 
-
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/chicken_fingers.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/chicken_fingers.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Chicken Fingers</a><span>100 MDL</span>
+                <a href="#">Jalapeno peppers</a><span>145 lei</span>
               </div>
               <div class="menu-ingredients">
-                chicken nuggets with roasted potatoes and tzatziki sauce)(330g)
+                Breaded cheese with jalapeno peppers and aioli sauce (180/50 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/cheese_sticks.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/cheese_sticks.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Cheese Sticks</a><span>100 MDL</span>
+                <a href="#">English Fish and chips</a><span>265 lei</span>
               </div>
               <div class="menu-ingredients">
-                cheese sticks with mixed caramelized nuts and honey mustard sauce (230g)
+                Cod tempura with french fries, honey & mustard sauce and lemon (200/100/30 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/fish_and_chips.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/fish_and_chips.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Fish and Chips</a><span>165 MDL</span>
+                <a href="#">Shrimps and chips</a><span>245 lei</span>
               </div>
               <div class="menu-ingredients">
-                Zander tempura with shrimp chips, roasted potatoes and  tzatziki sauce (275g)
+                Shrimps tempura with peppers, sweet chili sauce (240/50 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/shrimp_and_chips.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/shrimp_and_chips.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Shrimp and  Chips</a><span>190 MDL</span>
+                <a href="#">Squid rings</a><span>140 lei</span>
               </div>
               <div class="menu-ingredients">
-                Shrimp tempura with peppers tempura, shrimp chips, roasted potatoes and sweet chili sauce
+                Breaded squid with sweet-chili sauce and lemon (80/50/30 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/onion_rings.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/onion_rings.jpg" alt="Onion Rings" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Onion Rings </a><span>60 MDL</span>
+                <a href="#">Mussels and chips</a><span>175 lei</span>
               </div>
               <div class="menu-ingredients">
-                Onion rings with honey mustard sauce (200g)
+                Breaded mussels with creamy sauce and lemon (170/50/30 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/almonds.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/almonds.jpg" alt="Fried Almonds with Salt" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Fried Almonds with Salt </a><span>100 MDL</span>
+                <a href="#">Fried anchovies</a><span>110 lei</span>
               </div>
               <div class="menu-ingredients">
-                Salted fried almonds (100g)
+                With lemon (150/30 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/nuts.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/nuts.jpg" alt="Caramelized Mixed Nuts" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Caramelized Mixed Nuts </a><span>120 MDL</span>
+                <a href="#">Onion rings</a><span>90 lei</span>
               </div>
               <div class="menu-ingredients">
-                Mixed nuts caramelized to perfection (100g)
+                With sweet-chili sauce (160 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-<!--              <a href="assets/img/menu/" class="glightbox menu-img" data-gallery="images-gallery">-->
-<!--                <img src="assets/img/menu/" alt=" " class="img-fluid circular-img">-->
-<!--              </a>-->
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Beer Platter </a><span>360 MDL</span>
+                <a href="#">Fried almonds with salt</a><span>110 lei</span>
               </div>
               <div class="menu-ingredients">
-                Beef/pork/chicken jerky, spicy chicken sausages, pork pastrami, cheese sticks, roasted potatoes, onion rings, mixed caramelized nuts, honey mustard, relish, tzatziki sauce (650g)
+                (100 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/whiskey_platter.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/whiskey_platter.jpg" alt="Whisky Platter" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Whisky Platter </a><span>590 MDL</span>
+                <a href="#">Caramelized mixed nuts</a><span>120 lei</span>
               </div>
               <div class="menu-ingredients">
-                Asian-style pork ribs, blue cheese, pork meatballs, pork pastrami, dark chocolate, mixed caramelized nuts, mixed dried fruits, sweet chili sauce, BBQ sauce, blue cheese sauce (800g)
+                (100 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-appetizers">
-              <a href="assets/img/menu/chese_plattern.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/chese_plattern.jpg" alt="Cheese Platter" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Cheese Platter </a><span>300 MDL</span>
+                <a href="#">Whisky set</a><span>390 lei</span>
               </div>
               <div class="menu-ingredients">
-                Assorted cheeses: dor blue, parmesan, camembert; seasonal fruits, mixed caramelized nuts, mixed dried fruits, honey (420g)
+                Beef pastrami, dry aged bresaola, cheddar, pecorino, coffee honey, nuts (280 gr)
               </div>
             </div>
 
-
-
-            <!-- Salads -->
-            <div class="col-lg-6 menu-item isotope-item filter-salads">
-              <a href="assets/img/menu/chicken_salad.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/chicken_salad.jpg" alt=" " class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Churchill's Chicken Salad </a><span>130 MDL</span>
+                <a href="#">Wine set</a><span>290 lei</span>
               </div>
               <div class="menu-ingredients">
-                Chicken fillet, mixed salad, avocado, cherry tomatoes, parmesan, house dressing (260g)
+                Cheese sticks, nuts, sauce blue cheese, Pecorino, bresaola (280 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-salads">
-              <a href="assets/img/menu/shrimp_salad.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/shrimp_salad.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Churchill's Shrimp Salad </a><span>170 MDL</span>
+                <a href="#">Beer set (for 3-4 persons)</a><span>570 lei</span>
               </div>
               <div class="menu-ingredients">
-                Shrimps, mixed salad, avocado, cherry tomatoes, sesame, house sauce (260g)
+                Jerky mix, French fries, onion rings, cheese sticks (1/200/100/160/260 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-salads">
-              <a href="assets/img/menu/tomato_salad.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/tomato_salad.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-beer">
               <div class="menu-content">
-                <a href="#">Tomato Salad </a><span>90 MDL</span>
+                <a href="#">Cheese set</a><span>360 lei</span>
               </div>
               <div class="menu-ingredients">
-                Tomatoes, red onion, sour cream (260g)
+                Pecorino, Parmigiano, Gorgonzola, Cheddar, nuts, coffee honey (300 gr)
               </div>
             </div>
 
-            <!-- Soups -->
-            <div class="col-lg-6 menu-item isotope-item filter-soups">
-              <a href="assets/img/menu/chowder.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/chowder.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
+            <!-- AMAZING APPETIZERS - FISH -->
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-amazing filter-fish-app">
               <div class="menu-content">
-                <a href="#">Chowder Shrimp Soup </a><span>130 MDL</span>
+                <a href="#">Salmon Orange Ceviche</a><span>210 lei</span>
               </div>
               <div class="menu-ingredients">
-                Shrimps, potato, carrot, celery, onion, corn, bacon, whipped cream (380g)
+                Slices of salmon with chili, ginger and oranges (170 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-soups">
-              <a href="assets/img/menu/mushroom.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/mushroom.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-amazing filter-fish-app">
               <div class="menu-content">
-                <a href="#">Creamy Mushroom Soup </a><span>100 MDL</span>
+                <a href="#">Salmon Carpaccio</a><span>240 lei</span>
               </div>
               <div class="menu-ingredients">
-                Mushrooms, potatoes, onion, carrots, celery, parmesan, croutons (330g)
+                Salted salmon with green mix and crispy nachos (170 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-soups">
-              <a href="assets/img/menu/lentil.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/lentil.jpg" alt="Churchill's Mini Pancakes" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-amazing filter-fish-app">
               <div class="menu-content">
-                <a href="#">Lentil Soup </a><span>100 MDL</span>
+                <a href="#">Prawn & Avocado Carpaccio</a><span>245 lei</span>
               </div>
               <div class="menu-ingredients">
-                Lentils, pork pastrami, potatoes, carrots, onion, croutons (380g)
+                Boiled prawns with slices of avocado (180 gr)
               </div>
             </div>
 
-            <!-- Main Dishes -->
-            <div class="col-lg-6 menu-item isotope-item filter-main">
-              <a href="assets/img/menu/ribs_bbq.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/ribs_bbq.jpg" alt="Pork Ribs BBQ" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-amazing filter-fish-app">
               <div class="menu-content">
-                <a href="#">Pork Ribs BBQ</a><span>280 MDL</span>
+                <a href="#">Lady's Choice Salmon Sandwich</a><span>220 lei</span>
               </div>
               <div class="menu-ingredients">
-                BBQ pork ribs, coleslaw, roasted potatoes, BBQ sauce (300/80/80/50g)
+                Craft sandwich with salmon gravlax, philadelphia and cucumbers (250 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-main">
-              <a href="assets/img/menu/ribs_buffalo.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/ribs_buffalo.jpg" alt="Pork Ribs Buffalo" class="img-fluid circular-img">
-              </a>
+            <!-- AMAZING APPETIZERS - MEAT -->
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-amazing filter-meat-app">
               <div class="menu-content">
-                <a href="#">Pork Ribs Buffalo</a><span>280 MDL</span>
+                <a href="#">Gentleman Beef Pastrami Sandwich</a><span>220 lei</span>
               </div>
               <div class="menu-ingredients">
-                Buffalo sauce pork ribs, coleslaw, roasted potatoes, buffalo sauce (300/80/80/50g)
+                Craft sandwich with cherry smoked pastrami, artisanal mustard and pickles (250 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-main">
-              <a href="assets/img/menu/ribs_asian.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/ribs_asian.jpg" alt="Pork Ribs Asian Style" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-amazing filter-meat-app">
               <div class="menu-content">
-                <a href="#">Pork Ribs Asian Style</a><span>280 MDL</span>
+                <a href="#">Beef Pastrami Ciabatta</a><span>220 lei</span>
               </div>
               <div class="menu-ingredients">
-                Pork ribs in spicy-sweet sauce, coleslaw, roasted potatoes, sweet chili sauce (300/80/80/50g)
+                Beef pastrami, cherry tomatoes, Gouda and Cheddar (250 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-main">
-              <a href="assets/img/menu/bbq_wings.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/bbq_wings.jpg" alt="Chicken Wings BBQ" class="img-fluid circular-img">
-              </a>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-amazing filter-meat-app">
               <div class="menu-content">
-                <a href="#">Chicken Wings BBQ</a><span>150 MDL</span>
+                <a href="#">Beef Carpaccio & Cheddar</a><span>240 lei</span>
               </div>
               <div class="menu-ingredients">
-                Chicken wings in BBQ sauce, roasted potatoes, coleslaw (250g/80g/50g)
+                Slices of beef with green mix and Cheddar sauce (170 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-main">
-              <a href="assets/img/menu/wings_buffalo.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/wings_buffalo.jpg" alt="Chicken Wings Buffalo" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-amazing filter-meat-app">
               <div class="menu-content">
-                <a href="#">Chicken Wings Buffalo</a><span>150 MDL</span>
+                <a href="#">Beef Tar-tar</a><span>230 lei</span>
               </div>
               <div class="menu-ingredients">
-                Chicken wings in buffalo sauce, roasted potatoes, coleslaw (250g/80g/50g)
+                Craft beef tar-tar with grilled bread (170/70 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-main">
-              <a href="assets/img/menu/truffel_chicken.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/truffel_chicken.jpg" alt="Chicken Breast with Truffle Sauce" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-amazing filter-meat-app">
               <div class="menu-content">
-                <a href="#">Chicken Breast with Truffle Sauce</a><span>160 MDL</span>
+                <a href="#">Dry Aged Black Angus Bresaola</a><span>245 lei</span>
               </div>
               <div class="menu-ingredients">
-                Chicken breast, mashed potatoes, truffle sauce (170/200g)
+                Slices of dry aged beef with Pecorino (130 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-main">
-<!--              <a href="assets/img/menu/" class="glightbox menu-img" data-gallery="images-gallery">-->
-<!--                <img src="assets/img/menu/" alt=" " class="img-fluid circular-img">-->
-<!--              </a>-->
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-amazing filter-meat-app">
               <div class="menu-content">
-                <a href="#">Dorado Fillet with Rice </a><span>260 MDL</span>
+                <a href="#">Chicken Liver Pate</a><span>165 lei</span>
               </div>
               <div class="menu-ingredients">
-                Dorado fillet, black rice, house sauce (150g/150g/30g)
+                With whisky, served with grilled ciabatta and caramelized onions (150/50/30 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-main">
-<!--              <a href="assets/img/menu/" class="glightbox menu-img" data-gallery="images-gallery">-->
-<!--                <img src="assets/img/menu/rib_eye_steak.jpg" alt="Rib-eye Steak" class="img-fluid circular-img">-->
-<!--              </a>-->
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-salads">
               <div class="menu-content">
-                <a href="#">Rib-eye Steak </a><span>95 MDL</span>
+                <a href="#">Vegetable Green Salad</a><span>125 lei</span>
               </div>
               <div class="menu-ingredients">
-                Matured beef steak, coleslaw, and roasted potatoes (100g)
+                With carrots, cucumbers, cherry tomatoes, olive oil and oregano (170 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-main">
-<!--              <a href="assets/img/menu/steak_new_york.jpg" class="glightbox menu-img" data-gallery="images-gallery">-->
-<!--                <img src="assets/img/menu/steak_new_york.jpg" alt="Steak New York" class="img-fluid circular-img">-->
-<!--              </a>-->
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-salads">
               <div class="menu-content">
-                <a href="#">Steak New York </a><span>95 MDL</span>
+                <a href="#">Beef Pastrami Salad</a><span>230 lei</span>
               </div>
               <div class="menu-ingredients">
-                Matured beef steak, coleslaw, and roasted potatoes (100g)
+                Warm salad with pastrami, green mix, crostini and Cheddar dressing (270 gr)
               </div>
             </div>
 
-            <!-- Burgers and Sandwiches -->
-            <div class="col-lg-6 menu-item isotope-item filter-burgers-sandwiches">
-              <a href="assets/img/menu/beef_burger.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/beef_burger.jpg" alt="Beef Burger" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-salads">
               <div class="menu-content">
-                <a href="#">Beef Burger </a><span>160 MDL</span>
+                <a href="#">Grilled Tuna Salad</a><span>235 lei</span>
               </div>
               <div class="menu-ingredients">
-                Bun, minced beef, tomatoes, pickles, blue cheese, cheddar, BBQ sauce; served with roasted potatoes and honey mustard sauce (400/80/50g)
+                With green mix, beans, olives and tomatoes (280 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-burgers-sandwiches">
-              <a href="assets/img/menu/pulled_burger.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/pulled_burger.jpg" alt="Pulled Pork Burger" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-salads">
               <div class="menu-content">
-                <a href="#">Pulled Pork Burger </a><span>150 MDL</span>
+                <a href="#">Crispy Chicken Caesar Salad</a><span>165 lei</span>
               </div>
               <div class="menu-ingredients">
-                Bun, pork shoulder in BBQ sauce, coleslaw; served with roasted potatoes and honey mustard sauce (330g/80g/50g)
+                With green mix, crostini, cherry tomatoes and Parmigiano (280 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-burgers-sandwiches">
-<!--              <a href="assets/img/menu/chicken_pastrami_sandwich.jpg" class="glightbox menu-img" data-gallery="images-gallery">-->
-<!--                <img src="assets/img/menu/chicken_pastrami_sandwich.jpg" alt="Chicken Pastrami Sandwich" class="img-fluid circular-img">-->
-<!--              </a>-->
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-salads">
               <div class="menu-content">
-                <a href="#">Chicken Pastrami Sandwich </a><span>90 MDL</span>
+                <a href="#">Crispy Shrimps Caesar Salad</a><span>185 lei</span>
               </div>
               <div class="menu-ingredients">
-                Panini, salad mix, cucumber, tomato, chicken pastrami, gouda; served with honey mustard and relish sauces (350g)
+                With green mix, crostini, cherry tomatoes and Parmigiano (280 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-burgers-sandwiches">
-<!--              <a href="assets/img/menu/pork_pastrami_sandwich.jpg" class="glightbox menu-img" data-gallery="images-gallery">-->
-<!--                <img src="assets/img/menu/pork_pastrami_sandwich.jpg" alt="Pork Pastrami Sandwich" class="img-fluid circular-img">-->
-<!--              </a>-->
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-salads">
               <div class="menu-content">
-                <a href="#">Pork Pastrami Sandwich </a><span>95 MDL</span>
+                <a href="#">Guacamole Salad</a><span>165 lei</span>
               </div>
               <div class="menu-ingredients">
-                Panini, salad mix, cucumber, tomato, pork pastrami, gouda; served with honey mustard and relish sauces (350g)
+                Avocado with tomatoes, onions, and nachos (180 gr)
               </div>
             </div>
 
-
-            <!-- Side Dishes -->
-            <div class="col-lg-6 menu-item isotope-item filter-sides">
-              <a href="assets/img/menu/fried_potato.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/fried_potato.jpg" alt="Deep Fried Potatoes" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-salads">
               <div class="menu-content">
-                <a href="#">Deep Fried Potatoes </a><span>50 MDL</span>
+                <a href="#">Pub Salad for hungry heart</a><span>175 lei</span>
               </div>
               <div class="menu-ingredients">
-                Baked and fried potatoes served with honey mustard sauce (200/50g)
+                Grilled bacon, French fries, green mix, Cheddar, Blue cheese dressing and crispy onions (320 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-sides">
-              <a href="assets/img/menu/cloeslaw.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-                <img src="assets/img/menu/cloeslaw.jpg" alt="Coleslaw" class="img-fluid circular-img">
-              </a>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-soups">
               <div class="menu-content">
-                <a href="#">Coleslaw </a><span>50 MDL</span>
+                <a href="#">Consomme soup</a><span>90 lei</span>
               </div>
               <div class="menu-ingredients">
-                Cabbage, carrots, pepper, apples, mayonnaise, mustard (200g)
+                Chicken broth, fillet, edamame, beans, broccoli, baby carrots, potatoes, capya peppers, quail eggs (310 gr)
               </div>
             </div>
 
-            <div class="col-lg-6 menu-item isotope-item filter-sides">
-            <a href="assets/img/menu/mash_potato.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-              <img src="assets/img/menu/mash_potato.jpg" alt="Mashed Potatoes" class="img-fluid circular-img">
-            </a>
-            <div class="menu-content">
-              <a href="#">Mashed Potatoes </a><span>50 MDL</span>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-soups">
+              <div class="menu-content">
+                <a href="#">Mexican Beef soup</a><span>125 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Beef, peppers, sweet corn and chili (300 gr)
+              </div>
             </div>
-            <div class="menu-ingredients">
-              Creamy mashed potatoes (200g)
-            </div>
-          </div>
 
-          <div class="col-lg-6 menu-item isotope-item filter-sides">
-            <a href="assets/img/menu/black_rice.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-              <img src="assets/img/menu/black_rice.jpg" alt="Black Rice" class="img-fluid circular-img">
-            </a>
-            <div class="menu-content">
-              <a href="#">Black Rice </a><span>60 MDL</span>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-soups">
+              <div class="menu-content">
+                <a href="#">English Salmon soup</a><span>175 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                White soup with salmon, sweet corn and greens (300 gr)
+              </div>
             </div>
-            <div class="menu-ingredients">
-              Flavorful black rice, perfect as a side dish (150g)
-            </div>
-          </div>
 
-          <div class="col-lg-6 menu-item isotope-item filter-sides">
-            <a href="assets/img/menu/batata.jpg" class="glightbox menu-img" data-gallery="images-gallery">
-              <img src="assets/img/menu/batata.jpg" alt="Batata" class="img-fluid circular-img">
-            </a>
-            <div class="menu-content">
-              <a href="#">Batata </a><span>80 MDL</span>
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-soups">
+              <div class="menu-content">
+                <a href="#">Smoked Beef Pastrami soup</a><span>125 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Clear beef soup with slices of beef pastrami, potatoes and carrots, served with red ciabatta (350 gr)
+              </div>
             </div>
-            <div class="menu-ingredients">
-              Sweet potato with truffle sauce (125/50g)
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-beef">
+              <div class="menu-content">
+                <a href="#">Craft Cheese Burger</a><span>240 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Marbled beef, Cheddar, pickles, aioli, caramelized onions, fries (1/350/120/30 gr)
+              </div>
             </div>
-          </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-beef">
+              <div class="menu-content">
+                <a href="#">Foie Gras Beef Burger</a><span>450 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Exclusive gourmet burger with marbled beef, foie gras, truffle sauce, aioli and fries (1/350/120/30 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-beef">
+              <div class="menu-content">
+                <a href="#">Striploin Steak English Style</a><span>160 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Served with Cheddar and chili (per 100 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-beef">
+              <div class="menu-content">
+                <a href="#">Beef Pastrami Hot</a><span>390 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Grilled beef pastrami steak with garlic sauce on crispy bread (320 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-beef">
+              <div class="menu-content">
+                <a href="#">Cheesy Beef Burrito</a><span>165 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Tortilla with beef, tomato sauce, sweet corn and Gouda (260 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-beef">
+              <div class="menu-content">
+                <a href="#">Taco Birria</a><span>220 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                6-hour slow-cooked beef with Mexican dried chili and consommé (260 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-beef">
+              <div class="menu-content">
+                <a href="#">Gourmet Churchill’s Steak</a><span>1350 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Fillet mignon with foie gras and truffle sauce (450 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-beef">
+              <div class="menu-content">
+                <a href="#">Irish Dry Aged 35 D. Ribeye Steak</a><span>245 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Guinness style with white demi-glace (per 100 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-beef">
+              <div class="menu-content">
+                <a href="#">Grilled Fillet Mignon</a><span>190 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Served with Blue cheese sauce (per 100 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-beef">
+              <div class="menu-content">
+                <a href="#">Hot Beef Carpaccio</a><span>270 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Slices of beef with soy sauce and ginger (280 gr)
+              </div>
+            </div>
+
+            <!-- MAIN COURSES - POULTRY -->
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-poultry">
+              <div class="menu-content">
+                <a href="#">Chicken Macallan</a><span>225 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Slow-cooked chicken with whisky sauce and cheesy potatoes (260 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-poultry">
+              <div class="menu-content">
+                <a href="#">Chicken Wings BBQ/Buffalo</a><span>185 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Served with blue cheese sauce and celery (390 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-poultry">
+              <div class="menu-content">
+                <a href="#">Chicken Taco (XL)</a><span>165 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Shredded chicken in tomato-chipotle sauce (260/50/50 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-poultry">
+              <div class="menu-content">
+                <a href="#">Chicken Taco (XXL)</a><span>265 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                (500/100/100 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-poultry">
+              <div class="menu-content">
+                <a href="#">Duck Magret</a><span>370 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Grilled medium, served with mashed potatoes and sweet chili sauce (200/250 gr)
+              </div>
+            </div>
+
+            <!-- MAIN COURSES - PORK -->
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-pork">
+              <div class="menu-content">
+                <a href="#">Pork Ribs BBQ</a><span>290 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Served with french fries (240/100/70 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-pork">
+              <div class="menu-content">
+                <a href="#">Taco Carnitas</a><span>165 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Pork neck confit, tender and velvety texture (240 gr)
+              </div>
+            </div>
+
+            <!-- MAIN COURSES - FISH & SEAFOOD -->
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-seafood">
+              <div class="menu-content">
+                <a href="#">Salmon Steak</a><span>320 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Grilled with aromatic herbs, served with tortilla and mustard sauce (260 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-seafood">
+              <div class="menu-content">
+                <a href="#">Red Tuna Steak</a><span>320 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Grilled with chili sauce, served with green salad (260 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-seafood">
+              <div class="menu-content">
+                <a href="#">Seafood Pan</a><span>560 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Prawns, mussels, calamari with garlic, vegetables, white wine and crostini (650 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-seafood">
+              <div class="menu-content">
+                <a href="#">Prawns Spaghetti</a><span>290 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Aromatic spaghetti with prawns and chili sauce (280 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-main filter-seafood">
+              <div class="menu-content">
+                <a href="#">Taco Gobernador</a><span>240 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Butter-sautéed shrimp with gratin melted cheese and chipotle sauce (200 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-special">
+              <div class="menu-content">
+                <a href="#">Special Gourmet Dinner by W. Churchill</a><span>1200 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Complete Package: Includes a glass of Champagne, Chicken liver Pate, Grilled 300gr Fillet mignon with Blue cheese sauce/green salad, and a Double whisky Glenlivet
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-dessert">
+              <div class="menu-content">
+                <a href="#">Dessert 18+</a><span>160 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Chocolate & Whiskey Ice cream cake (150 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-dessert">
+              <div class="menu-content">
+                <a href="#">Cecilia Aquacade</a><span>160 lei</span>
+              </div>
+              <div class="menu-ingredients">
+                Airy and creamy fresh avocado version (130 gr)
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 menu-item isotope-item filter-dessert">
+              <div class="menu-content">
+                <a href="#">Dessert of the Day</a><span></span>
+              </div>
+              <div class="menu-ingredients">
+                Ask the waiter
+              </div>
+            </div>
 
           </div><!-- Menu Container -->
 
         </div>
+        
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const mainFilters = document.getElementById('main-filters');
+            const mobileFilterSelect = document.getElementById('mobile-filter-select');
+            const subAmazing = document.getElementById('submenu-amazing');
+            const subMain = document.getElementById('submenu-main');
+
+            mainFilters.addEventListener('click', function(e) {
+              if (e.target.tagName === 'LI') {
+                const filterValue = e.target.getAttribute('data-filter');
+                
+                subAmazing.style.display = 'none';
+                subMain.style.display = 'none';
+
+                if (filterValue === '.filter-amazing') {
+                  subAmazing.style.display = 'flex';
+                } else if (filterValue === '.filter-main') {
+                  subMain.style.display = 'flex';
+                }
+              }
+            });
+
+            // Mobile filter logic
+            mobileFilterSelect.addEventListener('change', function() {
+              const filterValue = this.value;
+              
+              // Trigger Isotope filter
+              const iso = Isotope.data(document.querySelector('.isotope-layout'));
+              if (iso) {
+                iso.arrange({ filter: filterValue });
+              }
+
+              // Handle submenus visibility (though on mobile they might just be part of the select list)
+              // If you want to show submenus as separate selects, that would be more complex.
+              // For now, the select includes sub-items directly.
+              subAmazing.style.display = 'none';
+              subMain.style.display = 'none';
+            });
+          });
+        </script>
 
       </section><!-- /Menu Section -->
 
@@ -731,7 +905,7 @@
   </div>
 
   <div class="container copyright text-center mt-4">
-    <p>© <span>Copyright</span> <strong class="px-1 sitename">Churchill's</strong> <span>All Rights Reserved</span></p>
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">Churchill's</strong> <span data-i18n="rights_reserved">All Rights Reserved</span></p>
 
   </div>
 
